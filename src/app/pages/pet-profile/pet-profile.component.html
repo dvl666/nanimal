@@ -1,0 +1,66 @@
+<div class="container">
+    <span>
+        <button mat-icon-button [routerLink]="['']" appearance="outlined" class="backButton">
+            <mat-icon class="size" fontIcon="arrow_back"></mat-icon>
+        </button>
+    </span>
+    <mat-card class="card">
+        <mat-card-header class="card-title"> {{pet.name|uppercase}} </mat-card-header>
+        <img mat-card-image class="petImage" src="{{pet.imageUrl}}" alt="Imagen de {{pet.name}}">
+        <mat-card-content>
+            <table>
+                <tr>
+                    <td class="td1"><h3>Nombre:</h3></td>
+                    <td><p>{{pet.name|titlecase}}</p></td>
+                </tr>
+                <tr>
+                    <td class="td1"><h3>Genero:</h3></td>
+                    <td><p>{{pet.gender|titlecase}}</p></td>
+                </tr>
+                <tr>
+                    <td class="td1"><h3>Descripcion:</h3></td>
+                    <td><p>{{pet.description}}</p></td>
+                </tr>
+                <tr>
+                    <td class="td1"><h3>Publicado por:</h3></td>
+                    <td><p>{{pet.pubBy}}</p></td>
+                </tr>
+                <tr>
+                    <td class="td1"><h3>Numero de contacto:</h3></td>
+                    <td><p>{{pet.contactNumber}}</p></td>
+                </tr>
+                @if (pet.medDetails) {
+                    <tr>
+                        <td class="td1"><h3>Ficha medica:</h3></td>
+                        <td class="center-content">
+                            <a mat-button href="https://www.google.com/" target="_blank">
+                                <mat-icon>link</mat-icon>
+                                Ver ficha
+                            </a>
+                        </td>
+                    </tr>
+                } @else {
+                    <tr>
+                        <td class="td1"><h3>Ficha medica</h3></td>
+                        <td><p>No posee</p></td>
+                    </tr>
+                }
+                @if (pet.rescued == true) {
+                    <tr>
+                        <td class="td1"><h3>Proviene del refugio:</h3></td>
+                        <td><p>{{pet.shelter}}</p></td>
+                    </tr>
+                }
+            </table>
+        </mat-card-content>
+        <mat-divider></mat-divider>
+        <div>
+            <mat-card-actions>
+                <button class="profileButton" mat-fab extended>
+                    <mat-icon>pets</mat-icon>
+                        Adoptar
+                  </button>
+            </mat-card-actions>
+        </div>
+    </mat-card>
+</div>

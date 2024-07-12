@@ -1,0 +1,18 @@
+<mat-toolbar class="toolbar" color="primary">
+    <div class="toolbar-content">
+        <div>
+            <img src="assets/nanimal-logo2.png" alt="Logo" class="toolbar-logo">
+            NANIMAL
+        </div>
+        <div class="toolbar-links">
+            <a mat-button>Sobre nosotros</a>
+            <a mat-button [routerLink]="['']">En adopcion</a>
+            <a mat-button [routerLink]="['/rescued']">Rescatados</a>
+        </div>
+        <div class="toolbar-user">
+            <button [routerLink]="['user_profile']" mat-mini-fab>
+                <mat-icon>person</mat-icon>
+              </button>
+        </div>
+    </div>
+</mat-toolbar>

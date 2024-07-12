@@ -1,0 +1,109 @@
+.container {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 0px 0px;
+}
+
+.profileImage {
+    width: 300px;
+    height: 300px;
+    border-image: 310px white;
+    display: block;
+    margin: 0px;
+}
+
+.button {
+    padding: 0px 0 0 0;
+    margin-bottom: 24px;
+}
+
+.editButton {
+    justify-content: center;
+    width: 300px;
+    padding-top: auto;
+    border-radius: 0 0 5px 5px;
+    padding-right: 20px;
+}
+
+.infoSpan {
+    padding: 0px 0px 0px 32px;
+}
+
+.mat-mdc-card-header {
+    display: flex;
+    padding: 16px 16px 0;
+    flex-direction: column;
+}
+
+.mat-headline-large {
+
+}
+
+.card {
+    width: 100%;
+    color: white;
+    background-color: #fdf1f1;
+    border-radius: 0;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.photoCard {
+    background-color: white;
+    border-radius: 0;
+    width: 300px;
+    height: 300px;
+}
+
+.photop {
+    padding: 32px 0px 0px 0px;
+}
+
+h4 {
+    color: black;
+    font-weight: bold;
+}
+
+p {
+    color: black;
+}
+
+.pets-container {
+    padding: 32px 0px 0px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    padding: 32px 0px 0px 0px;
+}
+
+.h2div {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.button[_ngcontent-ng-c3544080001] {
+    padding: 0px 10px 0px 0px;
+}
+
+.containerL {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 250px;
+}
+
+.big-spinner mat-spinner {
+    width: 200px; /* Ancho del spinner */
+    height: 100px; /* Alto del spinner */
+    stroke-width: 100px; /* Grosor de la línea del spinner */
+}
+

@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container-select {
+    display: flex;
+    flex-direction: column;
+    padding: 22.66px 16px 0px 16px;
+}
+
+.mat-mdc-text-field-wrapper .mdc-text-field .mdc-text-field--filled {
+    border-radius: 100px;
+}
+
+.container-nanimal {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nanimal-image {
+    width: 300px;
+    height: auto;
+}
+
+h2 {
+    padding: 16px 0px 0px 0px;
+    text-align: center;
+}
+
+.containerL {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 300px;
+}
+
+.big-spinner mat-spinner {
+    width: 300px; /* Ancho del spinner */
+    height: 100px; /* Alto del spinner */
+    stroke-width: 100px; /* Grosor de la línea del spinner */
+}
+

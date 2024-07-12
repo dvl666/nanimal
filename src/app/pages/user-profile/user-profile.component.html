@@ -1,0 +1,54 @@
+@if (isLoading == true) {
+    <div class="containerL">
+        <mat-spinner></mat-spinner>
+    </div>  
+} 
+
+@if (isLoading == false) {
+    <h2 class="h2div">Tu Perfil:</h2>
+    <div class="container">
+        <span>
+            <div class="photodiv">
+                <!-- <mat-card class="photoCard" appearance="outlined"> -->
+                    <img class="profileImage photop" src="assets/user.jpg" alt="">
+                <!-- </mat-card> -->
+            </div>
+            <div class="button">
+                <button  mat-fab extended class="editButton">
+                    <mat-icon>edit</mat-icon>
+                    Editar
+                </button>
+            </div>
+            <div class="button">
+            </div>
+        </span>
+        <!-- <span class="infoSpan"> -->
+            <div class="title">
+                <h1>{{user.model}}</h1>
+            </div>
+            <div>
+                <mat-card class="card" appearance="outlined">
+                    <h4>Nombre:</h4>
+                    <p>{{user.name}}</p>
+                    <h4>Numero telefonico:</h4>
+                    <p>{{user.phoneNumber}}HP</p>
+                    <h4>Correo electronico:</h4>
+                    <p>{{user.mail}}</p>
+                    <h4>Cuidad:</h4>
+                    <p>{{user.city}}</p>
+                </mat-card>
+            </div>
+        <!-- </span> -->
+    </div>
+    <div class="h2div">
+        <h2>Publicaciones realizadas por ti</h2>
+    </div>
+    <div class="pets-container">
+        @for (pet of pets; track $index) {
+            <app-pet-card [pet]=pet [previousPage]="page"></app-pet-card>
+        }
+    </div>
+}
+
+
+

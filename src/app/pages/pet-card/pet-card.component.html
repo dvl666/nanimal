@@ -1,0 +1,13 @@
+<mat-card class="card">
+    <mat-card-header class="header-card"> {{pet.name}} </mat-card-header>
+    <div class="image-container">
+        <img mat-card-image class="petImage" src="{{pet.imageUrl}}" alt="Imagen de {{pet.name}}">
+    </div>
+    <div>
+        <mat-card-actions>
+            <button [routerLink]="['/pet', pet.id]" mat-fab extended class="profileButton" >
+                Perfil
+            </button>
+        </mat-card-actions>
+    </div>
+</mat-card>

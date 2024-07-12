@@ -1,0 +1,26 @@
+<div class="container-nanimal">
+    <img class="nanimal-image" src="https://cdn.discordapp.com/attachments/950203008623443968/1257529695772086342/2.png?ex=6684bd4b&is=66836bcb&hm=d329c70c06269383fae70ef7b48d10151a3d42eb1cad5461a4441f8d83b750e2&" alt="">
+    <h2>Aca encontraras todos los animalitos dados es adopcion por un refugio.</h2>
+</div>
+<div class="container-select">
+    <mat-form-field [hideRequiredMarker]="true">
+        <mat-select (selectionChange)="onChange($event.value)"  required>
+            <mat-option value="">Todos</mat-option>
+            <mat-option value="dog">Perros</mat-option>
+            <mat-option value="cat">Gatos</mat-option>
+        </mat-select>
+        <mat-label><mat-icon>pets</mat-icon> <strong> ¿Que animales deseas ver?  </strong></mat-label>
+    </mat-form-field>
+</div>
+@if (isLoading == true) {
+    <div class="containerL">
+        <mat-spinner></mat-spinner>
+    </div>  
+} 
+@if (isLoading == false) {
+    <div class="container">
+        @for (pet of pets; track $index) {
+            <app-pet-card [pet]=pet></app-pet-card>
+        }
+    </div>
+}
